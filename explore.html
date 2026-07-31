@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Explore Opportunities | Opportunity OS</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #111827;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .page-header {
+      background: white;
+      text-align: center;
+      padding: 55px 8%;
+    }
+
+    .page-header h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .page-header p {
+      color: #6b7280;
+      font-size: 18px;
+    }
+
+    .filters {
+      padding: 30px 8%;
+      background: white;
+      margin-top: 20px;
+    }
+
+    .filter-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 15px;
+    }
+
+    .filter-grid input,
+    .filter-grid select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 15px;
+      background: white;
+    }
+
+    .results {
+      padding: 40px 8% 70px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .results-heading {
+      margin-bottom: 25px;
+    }
+
+    #opportunityList {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+    }
+
+    .opportunity-card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .opportunity-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .opportunity-card p {
+      color: #6b7280;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .tags span {
+      background: #eef2ff;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    .view-button {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin-right: 8px;
+      font-size: 14px;
+    }
+
+    .view-button:hover {
+      opacity: 0.85;
+    }
+
+    button {
+      border: none;
+      background: #111827;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111827;
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .page-header h2 {
+        font-size: 32px;
+      }
+
+      .filter-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>Opportunity OS</h1>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+    </nav>
+
+  </header>
+
+
+  <section class="page-header">
+
+    <h2>Explore Opportunities</h2>
+
+    <p>
+      Find opportunities that match your interests,
+      goals and skills.
+    </p>
+
+  </section>
+
+
+  <section class="filters">
+
+    <div class="filter-grid">
+
+      <input
+        type="text"
+        id="searchBox"
+        placeholder="🔎 Search opportunities..."
+      >
+
+      <select id="categoryFilter">
+
+        <option value="All">All Categories</option>
+
+        <option value="Hackathons">Hackathons</option>
+
+        <option value="Competitions">Competitions</option>
+
+        <option value="Scholarships">Scholarships</option>
+
+        <option value="Tech Programs">Tech Programs</option>
+
+        <option value="Entrepreneurship">Entrepreneurship</option>
+
+        <option value="Volunteering">Volunteering</option>
+
+      </select>
+
+
+      <select id="modeFilter">
+
+        <option value="All">All Modes</option>
+
+        <option value="Online">Online</option>
+
+        <option value="Offline">Offline</option>
+
+        <option value="Hybrid">Hybrid</option>
+
+      </select>
+
+    </div>
+
+  </section>
+
+
+  <main class="results">
+
+    <div class="results-heading">
+
+      <h2>Available Opportunities</h2>
+
+    </div>
+
+    <div id="opportunityList"></div>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      Built by Siddhant Joshi • Opportunity OS
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
