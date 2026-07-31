@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>Opportunity OS</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -15,14 +17,14 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #f6f7fb;
+      background: #f5f7fb;
       color: #111827;
     }
 
     header {
       background: #111827;
       color: white;
-      padding: 25px 8%;
+      padding: 20px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -35,129 +37,165 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 25px;
+      margin-left: 20px;
     }
 
     .hero {
-      padding: 80px 8%;
-      text-align: center;
       background: white;
+      padding: 70px 8%;
+      text-align: center;
     }
 
     .hero h2 {
-      font-size: 48px;
+      font-size: 46px;
       margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 20px;
-      color: #6b7280;
       max-width: 650px;
       margin: auto;
+      color: #6b7280;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
-    .categories {
-      padding: 50px 8%;
+    .search-area {
+      padding: 40px 8%;
+      text-align: center;
     }
 
-    .categories h2 {
+    #searchBox {
+      width: 100%;
+      max-width: 700px;
+      padding: 18px;
+      border: 1px solid #d1d5db;
+      border-radius: 12px;
+      font-size: 16px;
+    }
+
+    .opportunities {
+      padding: 20px 8% 60px;
+    }
+
+    .opportunities h2 {
       margin-bottom: 25px;
     }
 
-    .grid {
+    #opportunityList {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
 
-    .card {
+    .opportunity-card {
       background: white;
-      padding: 30px;
+      padding: 25px;
       border-radius: 16px;
-      text-align: center;
       box-shadow: 0 5px 20px rgba(0,0,0,0.06);
     }
 
-    .card h3 {
-      margin-bottom: 10px;
+    .opportunity-card h3 {
+      margin-bottom: 12px;
     }
 
-    .card p {
+    .opportunity-card p {
       color: #6b7280;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .tags span {
+      background: #eef2ff;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    button {
+      border: none;
+      background: #111827;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      color: #6b7280;
+      background: #111827;
+      color: white;
     }
+
   </style>
 </head>
 
 <body>
 
   <header>
+
     <h1>Opportunity OS</h1>
 
     <nav>
       <a href="#">Home</a>
-      <a href="#">Discover</a>
-      <a href="#">About</a>
+      <a href="#opportunities">Discover</a>
     </nav>
+
   </header>
 
+
   <section class="hero">
+
     <h2>Find Your Next Opportunity.</h2>
 
     <p>
       Discover hackathons, competitions, scholarships,
-      tech programs, events, and volunteering opportunities.
+      tech programs, events, and volunteering opportunities
+      designed to help students learn, compete and grow.
     </p>
-  </section>
-
-  <section class="categories">
-
-    <h2>Explore Opportunities</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <h3>🏆 Hackathons</h3>
-        <p>Build, compete and solve real problems.</p>
-      </div>
-
-      <div class="card">
-        <h3>🥇 Competitions</h3>
-        <p>Challenge yourself and showcase your skills.</p>
-      </div>
-
-      <div class="card">
-        <h3>💰 Scholarships</h3>
-        <p>Discover funding opportunities for students.</p>
-      </div>
-
-      <div class="card">
-        <h3>💻 Tech Programs</h3>
-        <p>Learn from programs built for future creators.</p>
-      </div>
-
-      <div class="card">
-        <h3>🎤 Events</h3>
-        <p>Find conferences, meetups and student events.</p>
-      </div>
-
-      <div class="card">
-        <h3>🤝 Volunteering</h3>
-        <p>Get involved and create meaningful impact.</p>
-      </div>
-
-    </div>
 
   </section>
+
+
+  <section class="search-area">
+
+    <input
+      type="text"
+      id="searchBox"
+      placeholder="🔎 Search hackathons, scholarships, competitions..."
+      oninput="searchOpportunities()"
+    >
+
+  </section>
+
+
+  <section class="opportunities" id="opportunities">
+
+    <h2>🔥 Discover Opportunities</h2>
+
+    <div id="opportunityList"></div>
+
+  </section>
+
 
   <footer>
-    <p>Built by Siddhant Joshi • Opportunity OS</p>
+
+    <p>
+      Built by Siddhant Joshi • Opportunity OS
+    </p>
+
   </footer>
 
+
+  <script src="script.js"></script>
+
 </body>
+
 </html>
