@@ -20,7 +20,7 @@ const opportunities = [
     category: "Scholarships",
     location: "India",
     deadline: "Demo",
-    description: "Demo opportunity — official opportunity data will be added after verification."
+    description: "Demo opportunity — official opportunity data will be added after verification ."
   url: "#"
   },
   {
