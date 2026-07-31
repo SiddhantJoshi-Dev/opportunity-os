@@ -103,6 +103,32 @@
     .opportunities h2 {
       margin-bottom: 25px;
     }
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      gap: 20px;
+    }
+
+    .explore-link {
+      color: #111827;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .explore-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+
+     .section-heading {
+       flex-direction: column;
+       align-items: flex-start;
+    }
+
+}
 
     #opportunityList {
       display: grid;
@@ -181,8 +207,8 @@
     <h1>Opportunity OS</h1>
 
     <nav>
-      <a href="#">Home</a>
-      <a href="#opportunities">Discover</a>
+      <a href="index.html">Home</a>
+      <a href="explore.html">Discover</a>
     </nav>
 
   </header>
@@ -247,7 +273,15 @@
 
   <section class="opportunities" id="opportunities">
 
-    <h2>🔥 Discover Opportunities</h2>
+    <div class="section-heading">
+
+  <h2>🔥 Discover Opportunities</h2>
+
+  <a href="explore.html" class="explore-link">
+    View all opportunities →
+  </a>
+
+</div>
 
     <div id="opportunityList"></div>
 
