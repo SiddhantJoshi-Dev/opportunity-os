@@ -1,37 +1,32 @@
-const opportunities = [
-   {
-  title: "AI Innovation Hackathon",
-  category: "Hackathons",
-  location: "Online",
-  deadline: "Demo",
-  description: "Demo opportunity — official opportunity data will be added after verification.",
-  url: "#"
-  },,
-  {
-    title: "Student Startup Challenge",
-    category: "Competitions",
-    location: "India",
-    deadline: "Demo",
-    description: "Demo opportunity — official opportunity data will be added after verification.",
-  url: "#"
-  },
-  {
-    title: "Future Leaders Scholarship",
-    category: "Scholarships",
-    location: "India",
-    deadline: "Demo",
-    description: "Demo opportunity — official opportunity data will be added after verification ."
-  url: "#"
-  },
-  {
-    title: "Google Developer Program",
-    category: "Tech Programs",
-    location: "Online",
-    deadline: "Demo",
-    description: "Demo opportunity — official opportunity data will be added after verification."
-  url: "#"
+let opportunities = [];
+
+async function loadOpportunities() {
+  try {
+    const response = await fetch("data/opportunities.json");
+
+    if (!response.ok) {
+      throw new Error("Could not load opportunities.");
+    }
+
+    opportunities = await response.json();
+
+    displayOpportunities(opportunities);
+
+  } catch (error) {
+    console.error(error);
+
+    const container = document.getElementById("opportunityList");
+
+    if (container) {
+      container.innerHTML = `
+        <p>
+          Unable to load opportunities right now.
+          Please try again later.
+        </p>
+      `;
+    }
   }
-];
+}
 
 function displayOpportunities(list) {
   const container = document.getElementById("opportunityList");
@@ -108,7 +103,7 @@ function saveOpportunity(title) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  displayOpportunities(opportunities);
+  displayOpportunities();
 });
 
 function filterCategory(category) {
