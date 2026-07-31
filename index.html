@@ -73,6 +73,29 @@
       font-size: 16px;
     }
 
+    .category-buttons {
+      max-width: 1000px;
+      margin: 25px auto 0;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .category-buttons button {
+      background: white;
+      color: #111827;
+      border: 1px solid #e5e7eb;
+      padding: 10px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .category-buttons button:hover {
+      background: #111827;
+      color: white;
+    }
     .opportunities {
       padding: 20px 8% 60px;
     }
@@ -166,14 +189,46 @@
 
   <section class="search-area">
 
-    <input
-      type="text"
-      id="searchBox"
-      placeholder="🔎 Search hackathons, scholarships, competitions..."
-      oninput="searchOpportunities()"
-    >
+  <input
+    type="text"
+    id="searchBox"
+    placeholder="🔎 Search opportunities..."
+    oninput="searchOpportunities()"
+  >
 
-  </section>
+  <div class="category-buttons">
+
+    <button onclick="filterCategory('All')">
+      🌎 All
+    </button>
+
+    <button onclick="filterCategory('Hackathons')">
+      🏆 Hackathons
+    </button>
+
+    <button onclick="filterCategory('Competitions')">
+      🥇 Competitions
+    </button>
+
+    <button onclick="filterCategory('Scholarships')">
+      🎓 Scholarships
+    </button>
+
+    <button onclick="filterCategory('Tech Programs')">
+      💻 Tech Programs
+    </button>
+
+    <button onclick="filterCategory('Entrepreneurship')">
+      🚀 Entrepreneurship
+    </button>
+
+    <button onclick="filterCategory('Volunteering')">
+      🤝 Volunteering
+    </button>
+
+  </div>
+
+</section>
 
 
   <section class="opportunities" id="opportunities">
