@@ -1,19 +1,20 @@
 [
   {
     "id": 1,
-    "title": "Opportunity Name",
-    "organization": "Organization Name",
-    "category": "Hackathons",
-    "description": "Replace this with a verified opportunity description.",
-    "eligibility": "Replace with verified eligibility information.",
-    "ageRange": "Replace with verified age information.",
-    "location": "India / Online",
+    "title": "NVIDIA Student Network",
+    "organization": "NVIDIA",
+    "category": "Tech Programs",
+    "description": "A student-focused NVIDIA program providing training, tools, and projects to help students develop skills for careers in AI.",
+    "eligibility": "Students; verify current eligibility and availability on the official NVIDIA website.",
+    "ageRange": "Check official program requirements",
+    "location": "Global / Online",
     "mode": "Online",
-    "deadline": "YYYY-MM-DD",
-    "url": "https://example.com",
+    "deadline": "Ongoing / Check official website",
+    "url": "https://www.nvidia.com/en-in/programs/",
     "tags": [
       "AI",
       "Technology",
+      "NVIDIA",
       "Students"
     ]
   }
