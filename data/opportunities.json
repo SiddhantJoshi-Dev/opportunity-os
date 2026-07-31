@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Opportunity Name",
+    "organization": "Organization Name",
+    "category": "Hackathons",
+    "description": "Replace this with a verified opportunity description.",
+    "eligibility": "Replace with verified eligibility information.",
+    "ageRange": "Replace with verified age information.",
+    "location": "India / Online",
+    "mode": "Online",
+    "deadline": "YYYY-MM-DD",
+    "url": "https://example.com",
+    "tags": [
+      "AI",
+      "Technology",
+      "Students"
+    ]
+  }
+]
