@@ -97,3 +97,18 @@ function saveOpportunity(title) {
 document.addEventListener("DOMContentLoaded", () => {
   displayOpportunities(opportunities);
 });
+
+function filterCategory(category) {
+
+  if (category === "All") {
+    displayOpportunities(opportunities);
+    return;
+  }
+
+  const filtered = opportunities.filter(opportunity =>
+    opportunity.category === category
+  );
+
+  displayOpportunities(filtered);
+}
+
