@@ -1,31 +1,35 @@
 const opportunities = [
-  {
-    title: "AI Innovation Hackathon",
-    category: "Hackathons",
-    location: "Online",
-    deadline: "2026-08-15",
-    description: "Build an AI-powered solution to solve a real-world problem."
-  },
+   {
+  title: "AI Innovation Hackathon",
+  category: "Hackathons",
+  location: "Online",
+  deadline: "Demo",
+  description: "Demo opportunity — official opportunity data will be added after verification.",
+  url: "#"
+  },,
   {
     title: "Student Startup Challenge",
     category: "Competitions",
     location: "India",
-    deadline: "2026-08-25",
-    description: "Present your startup idea and compete with student innovators."
+    deadline: "Demo",
+    description: "Demo opportunity — official opportunity data will be added after verification.",
+  url: "#"
   },
   {
     title: "Future Leaders Scholarship",
     category: "Scholarships",
     location: "India",
-    deadline: "2026-09-10",
-    description: "A scholarship opportunity for ambitious students."
+    deadline: "Demo",
+    description: "Demo opportunity — official opportunity data will be added after verification."
+  url: "#"
   },
   {
     title: "Google Developer Program",
     category: "Tech Programs",
     location: "Online",
-    deadline: "2026-09-20",
-    description: "Learn, build projects and connect with the developer community."
+    deadline: "Demo",
+    description: "Demo opportunity — official opportunity data will be added after verification."
+  url: "#"
   }
 ];
 
@@ -56,9 +60,18 @@ function displayOpportunities(list) {
         ${opportunity.deadline}
       </p>
 
-      <button onclick="saveOpportunity('${opportunity.title}')">
-        ⭐ Save
-      </button>
+      <a
+  href="${opportunity.url}"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="view-button"
+>
+  View Official Opportunity ↗
+</a>
+
+<button onclick="saveOpportunity('${opportunity.title}')">
+  ⭐ Save
+</button>
     `;
 
     container.appendChild(card);
