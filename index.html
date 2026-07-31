@@ -1,305 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Opportunity OS</title>
+    <title>Opportunity-OS | Discover Your Next Opportunity</title>
 
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #111827;
-    }
-
-    header {
-      background: #111827;
-      color: white;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 24px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-    }
-
-    .hero {
-      background: white;
-      padding: 70px 8%;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 46px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: #6b7280;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .search-area {
-      padding: 40px 8%;
-      text-align: center;
-    }
-
-    #searchBox {
-      width: 100%;
-      max-width: 700px;
-      padding: 18px;
-      border: 1px solid #d1d5db;
-      border-radius: 12px;
-      font-size: 16px;
-    }
-
-    .category-buttons {
-      max-width: 1000px;
-      margin: 25px auto 0;
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .category-buttons button {
-      background: white;
-      color: #111827;
-      border: 1px solid #e5e7eb;
-      padding: 10px 16px;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .category-buttons button:hover {
-      background: #111827;
-      color: white;
-    }
-    .opportunities {
-      padding: 20px 8% 60px;
-    }
-
-    .opportunities h2 {
-      margin-bottom: 25px;
-    }
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 25px;
-      gap: 20px;
-    }
-
-    .explore-link {
-      color: #111827;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .explore-link:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-
-     .section-heading {
-       flex-direction: column;
-       align-items: flex-start;
-    }
-
-}
-
-    #opportunityList {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .opportunity-card {
-      background: white;
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    }
-
-    .opportunity-card h3 {
-      margin-bottom: 12px;
-    }
-
-    .opportunity-card p {
-      color: #6b7280;
-      line-height: 1.5;
-      margin-bottom: 15px;
-    }
-
-    .tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 15px;
-    }
-
-    .tags span {
-      background: #eef2ff;
-      padding: 6px 10px;
-      border-radius: 20px;
-      font-size: 13px;
-    }
-
-    button {
-      border: none;
-      background: #111827;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #111827;
-      color: white;
-    }
-    .view-button {
-      display: inline-block;
-      background: #111827;
-      color: white;
-      text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 8px;
-      margin-right: 8px;
-      font-size: 14px;
-    }
-
-    .view-button:hover {
-      opacity: 0.85;
-    }
-
-  </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-
-    <h1>Opportunity OS</h1>
+<header>
+    <div class="logo">Opportunity-OS</div>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="explore.html">Discover</a>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="#about">About</a>
     </nav>
+</header>
 
-  </header>
 
+<main>
 
-  <section class="hero">
+<section class="hero">
 
-    <h2>Find Your Next Opportunity.</h2>
+    <h1>
+        Discover Your Next
+        <span>Opportunity.</span>
+    </h1>
 
     <p>
-      Discover hackathons, competitions, scholarships,
-      tech programs, events, and volunteering opportunities
-      designed to help students learn, compete and grow.
+        Find hackathons, competitions, scholarships,
+        tech programs, events and volunteering opportunities
+        made for students.
     </p>
 
-  </section>
+    <div class="search-box">
 
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search opportunities..."
+        >
 
-  <section class="search-area">
+        <button onclick="searchOpportunities()">
+            Search
+        </button>
 
-  <input
-    type="text"
-    id="searchBox"
-    placeholder="🔎 Search opportunities..."
-    oninput="searchOpportunities()"
-  >
-
-  <div class="category-buttons">
-
-    <button onclick="filterCategory('All')">
-      🌎 All
-    </button>
-
-    <button onclick="filterCategory('Hackathons')">
-      🏆 Hackathons
-    </button>
-
-    <button onclick="filterCategory('Competitions')">
-      🥇 Competitions
-    </button>
-
-    <button onclick="filterCategory('Scholarships')">
-      🎓 Scholarships
-    </button>
-
-    <button onclick="filterCategory('Tech Programs')">
-      💻 Tech Programs
-    </button>
-
-    <button onclick="filterCategory('Entrepreneurship')">
-      🚀 Entrepreneurship
-    </button>
-
-    <button onclick="filterCategory('Volunteering')">
-      🤝 Volunteering
-    </button>
-
-  </div>
+    </div>
 
 </section>
 
 
-  <section class="opportunities" id="opportunities">
+<section>
 
-    <div class="section-heading">
+    <div class="section-title">
 
-  <h2>🔥 Discover Opportunities</h2>
+        <h2>Explore Opportunities</h2>
 
-  <a href="explore.html" class="explore-link">
-    View all opportunities →
-  </a>
+        <p>
+            Find something that matches your interests.
+        </p>
 
-</div>
-
-    <div id="opportunityList"></div>
-
-  </section>
+    </div>
 
 
-  <footer>
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🏆 Hackathons</h3>
+
+            <p>
+                Build projects, solve real problems
+                and compete with other students.
+            </p>
+
+            <span class="tag">Technology</span>
+            <span class="tag">Competition</span>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🎯 Competitions</h3>
+
+            <p>
+                Discover academic, coding,
+                business and creative competitions.
+            </p>
+
+            <span class="tag">Students</span>
+            <span class="tag">Challenge</span>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>💰 Scholarships</h3>
+
+            <p>
+                Find scholarships and financial
+                opportunities for your education.
+            </p>
+
+            <span class="tag">Education</span>
+            <span class="tag">Funding</span>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>💻 Tech Programs</h3>
+
+            <p>
+                Explore internships, fellowships,
+                bootcamps and technology programs.
+            </p>
+
+            <span class="tag">Technology</span>
+            <span class="tag">Career</span>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🎤 Events</h3>
+
+            <p>
+                Discover conferences, workshops,
+                meetups and student events.
+            </p>
+
+            <span class="tag">Events</span>
+            <span class="tag">Networking</span>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🤝 Volunteering</h3>
+
+            <p>
+                Find meaningful volunteering opportunities
+                and make an impact.
+            </p>
+
+            <span class="tag">Community</span>
+            <span class="tag">Impact</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="about">
+
+    <div class="section-title">
+
+        <h2>Why Opportunity-OS?</h2>
+
+        <p>
+            One place to discover opportunities
+            that can help students learn, build and grow.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
 
     <p>
-      Built by Siddhant Joshi • Opportunity OS
+        © 2026 Opportunity-OS
     </p>
 
-  </footer>
+    <p>
+        Built as a student technology project.
+    </p>
+
+</footer>
 
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
