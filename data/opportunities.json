@@ -1,16 +1,72 @@
 [
   {
     "id": 1,
+    "title": "Google Summer of Code",
+    "organization": "Google",
+    "category": "Tech Programs",
+    "description": "Global program where contributors work on open-source software projects with mentorship from participating organizations.",
+    "eligibility": "Generally open to beginners in open source who meet the program requirements. Check official eligibility.",
+    "ageRange": "See official eligibility",
+    "location": "Global / Online",
+    "mode": "Online",
+    "deadline": "Check official website",
+    "url": "https://summerofcode.withgoogle.com/",
+    "tags": ["Google", "Open Source", "Programming", "Mentorship"]
+  },
+  {
+    "id": 2,
+    "title": "Google Developer Groups",
+    "organization": "Google",
+    "category": "Tech Programs",
+    "description": "Join local developer communities to attend workshops, networking events, hackathons and technical sessions.",
+    "eligibility": "Open to students and developers interested in Google technologies.",
+    "ageRange": "Open",
+    "location": "Global",
+    "mode": "Hybrid",
+    "deadline": "Ongoing",
+    "url": "https://gdg.community.dev/",
+    "tags": ["Google", "Community", "Networking", "Events"]
+  },
+  {
+    "id": 3,
+    "title": "Microsoft Learn Student Ambassadors",
+    "organization": "Microsoft",
+    "category": "Tech Programs",
+    "description": "Student leadership program that helps students build technical, leadership and community skills.",
+    "eligibility": "Students currently enrolled in an accredited academic institution. Check official requirements.",
+    "ageRange": "Student",
+    "location": "Global",
+    "mode": "Online",
+    "deadline": "Applications open periodically",
+    "url": "https://studentambassadors.microsoft.com/",
+    "tags": ["Microsoft", "Leadership", "Cloud", "AI"]
+  },
+  {
+    "id": 4,
+    "title": "GitHub Student Developer Pack",
+    "organization": "GitHub",
+    "category": "Tech Programs",
+    "description": "Access free developer tools, cloud credits and learning resources for eligible students.",
+    "eligibility": "Verified students meeting GitHub Education requirements.",
+    "ageRange": "Student",
+    "location": "Global",
+    "mode": "Online",
+    "deadline": "Ongoing",
+    "url": "https://education.github.com/pack",
+    "tags": ["GitHub", "Students", "Developer Tools", "Education"]
+  },
+  {
+    "id": 5,
     "title": "NVIDIA Student Network",
     "organization": "NVIDIA",
     "category": "Tech Programs",
-    "description": "A student-focused NVIDIA program providing training, tools, and projects to help students develop skills for careers in AI.",
-    "eligibility": "Students; verify current eligibility and availability on the official NVIDIA website.",
-    "ageRange": "Check official program requirements",
-    "location": "Global / Online",
+    "description": "Student-focused AI learning community with access to resources, projects and networking opportunities.",
+    "eligibility": "Check the official NVIDIA Student Network requirements.",
+    "ageRange": "Student",
+    "location": "Global",
     "mode": "Online",
-    "deadline": "Ongoing / Check official website",
+    "deadline": "Ongoing",
     "url": "https://www.nvidia.com/en-in/programs/",
-    "tags": ["AI", "Technology", "NVIDIA", "Students"]
+    "tags": ["NVIDIA", "AI", "GPU", "Students"]
   }
 ]
