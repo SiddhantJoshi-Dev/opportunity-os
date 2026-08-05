@@ -68,5 +68,75 @@
     "deadline": "Ongoing",
     "url": "https://www.nvidia.com/en-in/programs/",
     "tags": ["NVIDIA", "AI", "GPU", "Students"]
-  }
+  },
+  {
+  "id": 6,
+  "title": "Kaggle Competitions",
+  "organization": "Kaggle",
+  "category": "Competitions",
+  "description": "Participate in machine learning, data science and AI competitions to solve real-world problems and improve your skills.",
+  "eligibility": "Open to anyone with a Kaggle account. Individual competitions may have additional rules.",
+  "ageRange": "Open",
+  "location": "Global / Online",
+  "mode": "Online",
+  "deadline": "Varies by competition",
+  "url": "https://www.kaggle.com/competitions",
+  "tags": ["AI", "Machine Learning", "Data Science", "Competition"]
+},
+{
+  "id": 7,
+  "title": "NASA Space Apps Challenge",
+  "organization": "NASA",
+  "category": "Hackathons",
+  "description": "Global hackathon where participants build solutions to challenges using open data from NASA and partner space agencies.",
+  "eligibility": "Open to students, professionals and enthusiasts. Check official rules.",
+  "ageRange": "Open",
+  "location": "Global",
+  "mode": "Hybrid",
+  "deadline": "Annual event - Check official website",
+  "url": "https://www.spaceappschallenge.org/",
+  "tags": ["NASA", "Hackathon", "Space", "Innovation"]
+},
+{
+  "id": 8,
+  "title": "Major League Hacking (MLH)",
+  "organization": "MLH",
+  "category": "Hackathons",
+  "description": "International student hackathon community hosting events where participants build innovative projects and learn new technologies.",
+  "eligibility": "Students meeting the event requirements.",
+  "ageRange": "Student",
+  "location": "Global",
+  "mode": "Hybrid",
+  "deadline": "Varies by event",
+  "url": "https://mlh.io/",
+  "tags": ["Hackathon", "Programming", "Students", "Innovation"]
+},
+{
+  "id": 9,
+  "title": "Harvard CS50",
+  "organization": "Harvard University",
+  "category": "Tech Programs",
+  "description": "World-famous introductory computer science course covering programming, algorithms and software development fundamentals.",
+  "eligibility": "Open to everyone.",
+  "ageRange": "Open",
+  "location": "Online",
+  "mode": "Online",
+  "deadline": "Self-paced",
+  "url": "https://cs50.harvard.edu/",
+  "tags": ["Programming", "Computer Science", "Harvard", "Learning"]
+},
+{
+  "id": 10,
+  "title": "ISRO YUVIKA",
+  "organization": "Indian Space Research Organisation",
+  "category": "Tech Programs",
+  "description": "Young Scientist Programme introducing school students to space science, technology and ISRO's missions.",
+  "eligibility": "Primarily for selected school students as per the official yearly notification.",
+  "ageRange": "School Students",
+  "location": "India",
+  "mode": "Offline",
+  "deadline": "Annual - Check official notification",
+  "url": "https://jigyasa.iirs.gov.in/yuvika",
+  "tags": ["ISRO", "Space", "Science", "Students"]
+}
 ]
