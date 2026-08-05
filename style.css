@@ -48,4 +48,46 @@ nav a:hover {
 
 .hero h1 {
     font-size: 48px;
+.hero h3{
+    color:#9ca3af;
+    font-weight:400;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:25px;
+}
+
+.btn-primary,
+.btn-secondary{
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#2563eb;
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:2px solid #2563eb;
+    color:#2563eb;
+}
+
+.btn-secondary:hover{
+    background:#2563eb;
+    color:white;
+}
    
